@@ -42,33 +42,21 @@ class Solution {
 }
 
 public class QuickSort {
-    
-    public static void main(String args[]){
-        
-        Scanner sc = new Scanner(System.in);
-        
-        int n;
-        System.out.println("Enter number of elements in array: ");
-        n = sc.nextInt();
-        int array[] = new int[n];
-
-        System.out.println("Enter elements in array: ");
-        for(int i=0; i<n; i++){
-            array[i] = sc.nextInt();
-        }
-
-        System.out.println("Elements in array before sorting: ");
-        for(int i=0; i<n; i++){
-            System.out.print(array[i] + " ");
+    public static void main(String args[]) {
+        List<Integer> arr = new ArrayList<>();
+        arr = Arrays.asList(new Integer[] {4, 6, 2, 5, 7, 9, 1, 3});
+        int n = arr.size();
+        System.out.println("Before Using insertion Sort: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr.get(i) + " ");
         }
         System.out.println();
-
-        array = Solution.QuickSort(array);
-
-        System.out.println("Elements after sorting are: ");
-        for(int i=0; i<n; i++){
-            System.out.print(array[i] + " ");
+        arr = Solution.quickSort(arr);
+        System.out.println("After insertion sort: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr.get(i) + " ");
         }
         System.out.println();
     }
-}
+
+} 

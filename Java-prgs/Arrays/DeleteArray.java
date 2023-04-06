@@ -21,6 +21,7 @@ public class DeleteArray {
             System.out.println("Element not found");
             return m;
         }
+        return 0 ;
     }
     public static void main(String args[]){
 
