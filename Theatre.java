@@ -1,4 +1,3 @@
-package Arrays;
 import java.util.*;
 public class Theatre {
     public static void main(String args[]){

@@ -1,19 +1,16 @@
-// remove duplicates from sorted array
-
-package Arrays;
 import java.util.*;
 
-public class RemoveDuplicates {
-    static int dupes(int arr[]){
-        int i=0;
-        for(int j=0; j<arr.length; j++){
-            if(arr[i] != arr[j]){
-                i++;
-                arr[i] = arr[j];
-            }
+public class CheckSort{
 
+    static boolean check(int arr[], int n){
+
+        for(int i=0; i<n; i++){
+            for(int j=i+1; j<n; j++){
+                if(arr[j] < arr[i]) 
+                    return false;
+            }
         }
-        return i+1;
+        return true;
     }
     public static void main(String args[]){
 
@@ -32,10 +29,6 @@ public class RemoveDuplicates {
         }
         System.out.println();
 
-        int k = dupes(array);
-        System.out.println("Array aftre removing duplicates: ");
-        for(int i=0; i<k; i++){
-            System.out.print(array[i] + " ");
-        }
+        System.out.println("Given array is " + check(array, n));
     }
 }
